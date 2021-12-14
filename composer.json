@@ -1,0 +1,26 @@
+{
+  "name": "automation/mpos.vn",
+  "description": "mpos/2021",
+  "require": {
+    "codeception/codeception": "4.1.20",
+    "codeception/module-phpbrowser": "1.0.2",
+    "codeception/module-asserts": "^1.0.0",
+    "codeception/module-filesystem": "^1.0.0",
+    "ext-pdo": "*",
+    "doctrine/dbal": "^3.1"
+  },
+  "require-dev": {
+    "codeception/module-rest": "1.2.7",
+    "codeception/module-webdriver": "^1.2",
+    "ext-json": "*"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Page\\": "tests/acceptance/Page",
+      "Locator\\": "tests/acceptance/Locator",
+      "TestCase\\": "tests/acceptance/TestCase",
+      "Steps\\": "tests/acceptance/Steps",
+      "Validation\\": "tests/acceptance/Validation"
+    }
+  }
+}
