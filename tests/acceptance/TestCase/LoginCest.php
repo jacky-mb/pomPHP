@@ -7,7 +7,6 @@ use Validation\LoginPageValid;
 
 class LoginCest
 {
-
     public function login(AcceptanceTester $tester, $user = 'admink12', $password = 'Vhv@2020')
     {
         $loginPage = new LoginPage($tester);
