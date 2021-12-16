@@ -13,7 +13,8 @@
   "require-dev": {
     "codeception/module-rest": "1.2.7",
     "codeception/module-webdriver": "^1.2",
-    "ext-json": "*"
+    "ext-json": "*",
+    "ext-cassandra": "*"
   },
   "autoload-dev": {
     "psr-4": {

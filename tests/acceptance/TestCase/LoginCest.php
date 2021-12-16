@@ -2,6 +2,7 @@
 
 namespace TestCase;
 
+
 use AcceptanceTester;
 use Codeception\Example;
 use Helper\DataProviders;
@@ -19,10 +20,10 @@ class LoginCest
         sleep(300);
     }
 
-    /*
-     * @dataProvider dp
-     * */
-    public function loginDataProvider(AcceptanceTester $tester, Example $example)
+    /**
+     * @dataProvider providerAdd
+     */
+    public function loginDataProvider(AcceptanceTester $tester,Example $example)
     {
         $loginPage = new LoginPage($tester);
         $loginPage->loginWithDataProvider($example);
@@ -30,8 +31,8 @@ class LoginCest
 
     }
 
-    protected function dp()
+    protected function providerAdd()
     {
-        return null;
+        return DataProviders::loadTestCase(codecept_data_dir("demo.xlsx"),"k12",['index'=>1]);
     }
 }

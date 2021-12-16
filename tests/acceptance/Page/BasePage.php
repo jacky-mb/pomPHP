@@ -1,11 +1,13 @@
 <?php
+
 namespace Page;
-use AcceptanceTester;
+
+use Codeception\Module\WebDriver;
+use Facebook\WebDriver\Remote\RemoteWebDriver;
+use Facebook\WebDriver\WebDriverSelect;
 use Helper\DataProviders;
 
-
-class BasePage {
-    public AcceptanceTester $acceptanceTester;
-
-
+class BasePage
+{
+    public \AcceptanceTester $acceptanceTester;
 }

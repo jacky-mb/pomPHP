@@ -1,5 +1,7 @@
 <?php
 
+use Cassandra\Time;
+
 
 /**
  * Inherited Methods
@@ -15,7 +17,7 @@
  * @method void pause()
  *
  * @SuppressWarnings(PHPMD)
-*/
+ */
 class AcceptanceTester extends \Codeception\Actor
 {
     use _generated\AcceptanceTesterActions;
@@ -23,4 +25,16 @@ class AcceptanceTester extends \Codeception\Actor
     /**
      * Define custom actions here
      */
+    function waitPageLoaded()
+    {
+        while (1) {
+            sleep(0.2);
+            $readyState = $this->executeJS("return document.readyState;");
+            print "readyState: $readyState\n";
+            if ($readyState === "complete") {
+                return;
+            }
+}
+    }
+
 }

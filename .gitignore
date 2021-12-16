@@ -1,0 +1,7 @@
+target/
+/vendor
+_output
+
+.idea
+*.iml
+.DS_Store
